@@ -1,0 +1,9 @@
+project: savantenvs/mosquitto
+target: broker_fuzz_test_config-mined-77b5dfb
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/broker_fuzz_test_config-mined-77b5dfb/testsuite
+cmds:
+  - cmd: /mayhem/broker_fuzz_test_config
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/broker_fuzz_test_config-mined-77b5dfb/broker_fuzz_test_config.dict
